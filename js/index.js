@@ -70,8 +70,15 @@ const main = document.querySelector('.main-content');
   const bottomTextContent = bottomContent.querySelectorAll('.text-content');
 
 //CONTACT SECTION
-const contacts = document.querySelectorAll('.contact');
-console.log(contacts);
+const contacts = document.querySelector('.contact');
+const contactPar = contacts.querySelectorAll('p');
+const contactC = siteContent.contact;
+
+//FOOTER 
+const footer = document.querySelector('footer p');
+const footerText = siteContent.footer['copyright'];
+
+/******************************************************************************************/
 
 //NAV SECTION
 navLinks.forEach((el, index) => el.textContent = siteContent.nav["nav-item-" + (index + 1)]);
@@ -99,3 +106,10 @@ bottomTextContent[2].querySelector('h4').textContent = mainContent['vision-h4'];
 bottomTextContent[2].querySelector('p').textContent = mainContent['vision-content'];
 
 //CONTACT SECTION
+contacts.querySelector('h4').textContent = contactC['contact-h4'];
+contactPar[0].textContent = contactC['address'];
+contactPar[1].textContent = contactC['phone'];
+contactPar[2].textContent = contactC['email'];
+
+//FOOTER 
+footer.textContent = footerText;
