@@ -46,8 +46,10 @@ logo.setAttribute('src', "../img/logo.png");
 
 //CASHING VARIABLES FOR:
 
-//NAVIGATION LINKS
-const navLinks = document.querySelectorAll('a');
+//HEADER 
+const header = document.querySelector('header nav');
+  //NAVIGATION LINKS
+  const navLinks = document.querySelectorAll('a');
 
 //CTA SECTION
 const cta = document.querySelector('.cta');
@@ -62,7 +64,6 @@ const main = document.querySelector('.main-content');
   //TOP CONTENT
   const topContent = document.querySelector('.top-content');
   const topTextContent = topContent.querySelectorAll('.text-content');
-  console.log(topTextContent[0]);
   const mainContent = siteContent["main-content"];
 
   //BOTTOM CONTENT
@@ -82,6 +83,22 @@ const footerText = siteContent.footer['copyright'];
 
 //NAV SECTION
 navLinks.forEach((el, index) => el.textContent = siteContent.nav["nav-item-" + (index + 1)]);
+navLinks.forEach(el => el.style.color = "green");
+const newItem = document.createElement('li');
+newItem.textContent = 'Home';
+newItem.classList.add('link');
+newItem.style.listStyle = 'none';
+newItem.style.cursor = 'pointer';
+newItem.style.color = 'red';
+header.prepend(newItem);
+
+const newItem2 = document.createElement('li');
+newItem2.textContent = 'Info';
+newItem2.classList.add('link');
+newItem2.style.listStyle = 'none';
+newItem2.style.cursor = 'pointer';
+newItem2.style.color = 'red';
+header.appendChild(newItem2);
 
 //CTA SECTION
 ctaHeadingPrimary.textContent = ctaContent["h1"];
@@ -113,3 +130,4 @@ contactPar[2].textContent = contactC['email'];
 
 //FOOTER 
 footer.textContent = footerText;
+
