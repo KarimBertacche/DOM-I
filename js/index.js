@@ -39,16 +39,63 @@ const siteContent = {
   },
 };
 
-console.log(siteContent.nav["nav-item-" + (2 -1)])
-
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 logo.setAttribute('src', "../img/logo.png");
 
-const navLinks = document.querySelectorAll('a');
-console.log(navLinks)
-const cta = document.querySelector('.cta');
-console.log(cta);
+//CASHING VARIABLES FOR:
 
-navLinks.forEach((el, index) => console.log(el.textContent = siteContent.nav["nav-item-" + (index + 1)]));
+//NAVIGATION LINKS
+const navLinks = document.querySelectorAll('a');
+
+//CTA SECTION
+const cta = document.querySelector('.cta');
+const ctaHeadingPrimary = cta.querySelector('h1');
+const ctaButton = cta.querySelector('button');
+const ctaImg = cta.querySelector('#cta-img');
+const ctaContent = siteContent.cta;
+
+//MAIN CONTENT
+const main = document.querySelector('.main-content');
+
+  //TOP CONTENT
+  const topContent = document.querySelector('.top-content');
+  const topTextContent = topContent.querySelectorAll('.text-content');
+  console.log(topTextContent[0]);
+  const mainContent = siteContent["main-content"];
+
+  //BOTTOM CONTENT
+  const bottomContent = document.querySelector('.bottom-content');
+  const bottomTextContent = bottomContent.querySelectorAll('.text-content');
+
+//CONTACT SECTION
+const contacts = document.querySelectorAll('.contact');
+console.log(contacts);
+
+//NAV SECTION
+navLinks.forEach((el, index) => el.textContent = siteContent.nav["nav-item-" + (index + 1)]);
+
+//CTA SECTION
+ctaHeadingPrimary.textContent = ctaContent["h1"];
+ctaButton.textContent = ctaContent["button"];
+ctaImg.setAttribute('src', "../img/header-img.png");
+
+//TOP CONTENT
+topTextContent[0].querySelector('h4').textContent = mainContent['features-h4'];
+topTextContent[1].querySelector('h4').textContent = mainContent['about-h4'];
+topTextContent[0].querySelector('p').textContent = mainContent['features-content'];
+topTextContent[1].querySelector('p').textContent = mainContent['about-content'];
+
+//MAIN CONTENT IMAGE
+main.querySelector('.middle-img').setAttribute('src', '../img/mid-page-accent.jpg');
+
+//BOTTOM CONTENT
+bottomTextContent[0].querySelector('h4').textContent = mainContent['services-h4'];
+bottomTextContent[0].querySelector('p').textContent = mainContent['services-content'];
+bottomTextContent[1].querySelector('h4').textContent = mainContent['product-h4'];
+bottomTextContent[1].querySelector('p').textContent = mainContent['product-content'];
+bottomTextContent[2].querySelector('h4').textContent = mainContent['vision-h4'];
+bottomTextContent[2].querySelector('p').textContent = mainContent['vision-content'];
+
+//CONTACT SECTION
