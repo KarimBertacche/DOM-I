@@ -1,3 +1,5 @@
+
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -37,7 +39,16 @@ const siteContent = {
   },
 };
 
+console.log(siteContent.nav["nav-item-" + (2 -1)])
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 // logo.setAttribute('src', siteContent["nav"]["img-src"])
 logo.setAttribute('src', "../img/logo.png");
+
+const navLinks = document.querySelectorAll('a');
+console.log(navLinks)
+const cta = document.querySelector('.cta');
+console.log(cta);
+
+navLinks.forEach((el, index) => console.log(el.textContent = siteContent.nav["nav-item-" + (index + 1)]));
