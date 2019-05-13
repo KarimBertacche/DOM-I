@@ -145,6 +145,6 @@ navBar.classList.add('sticky');
 
 //EVENT LISTENER
 ctaButton.addEventListener('click', function(event){
-    // console.log('you press button' + event.target.value);
-    return ctaHeadingPrimary.classList.toggle('color');  
+    ctaHeadingPrimary.classList.toggle('color'); 
+    document.body.classList.toggle('bgColor');
 })
