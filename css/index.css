@@ -297,3 +297,16 @@ footer {
         margin: 20px;
     }
 }
+
+li:hover {
+    text-decoration: underline;  
+}
+
+.sticky {
+    position: sticky;
+    top: 0;  
+}
+
+.color {
+    color: orangered;
+}
