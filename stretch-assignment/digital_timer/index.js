@@ -50,6 +50,7 @@ const btn = document.createElement('button');
 btn.textContent = 'Start Timer';
 btn.style.cursor = 'pointer';
 btn.style.padding = '.5rem';
+btn.style.margin = '1rem';
 btn.style.borderRadius = '5px';
 const dig = document.querySelector('div');
 dig.insertAdjacentElement('afterend', btn);
