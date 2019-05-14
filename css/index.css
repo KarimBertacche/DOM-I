@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -296,4 +296,22 @@ footer {
     .contact {
         margin: 20px;
     }
+}
+
+li:hover {
+    text-decoration: underline;  
+}
+
+.sticky {
+    position: sticky;
+    top: 0;  
+}
+
+.color {
+    color: orangered;
+}
+
+.bgColor {
+    background-color: #000;
+    color: #fff;
 }
